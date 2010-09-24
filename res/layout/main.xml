@@ -8,43 +8,11 @@
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content">
-        <TextView android:text="GPS fix period"
+       	<TextView android:id="@+id/experimentstatus"
+       	          android:text="Experiment status"
         		  android:layout_width="wrap_content"
         		  android:layout_height="wrap_content"
-        		  android:layout_weight="1" /> 
-    	<EditText android:id="@+id/fix_period"
-    	          android:text="1"
-    	          android:inputType="number"
-        		  android:layout_width="wrap_content"
-        		  android:layout_height="wrap_content"
-        		  android:layout_weight="10"
-        		  android:layout_margin="5dp"/>
-    	<TextView android:text="seconds"
-        		  android:layout_width="wrap_content"
-        		  android:layout_height="wrap_content"
-        		  android:layout_weight="1"/> 
+        		  android:layout_weight="1" />
     </LinearLayout>
-    
-    <Button android:id="@+id/startstop"
-            android:text="Start"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"/>
-    
-    <TextView android:text="Time since stop: -"
-     		  android:layout_width="fill_parent"
-       		  android:layout_height="wrap_content"
-       		  android:layout_margin="10dp" />
-       		   
-    <TextView android:text="Time since start: -"
-     		  android:layout_width="fill_parent"
-       		  android:layout_height="wrap_content"
-       		  android:layout_margin="10dp"/>
-       		  
-    <TextView android:text="Time to first fix: -"
-     		  android:layout_width="fill_parent"
-       		  android:layout_height="wrap_content"
-       		  android:layout_margin="10dp"/>
-    
 
 </LinearLayout>
