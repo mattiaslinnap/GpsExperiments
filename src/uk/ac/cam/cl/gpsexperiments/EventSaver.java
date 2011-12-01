@@ -65,14 +65,17 @@ public class EventSaver {
 		}
 	}
 	
-	public void experimentRunStartedOrStopped(boolean started, int numExperiments) {
+	public void experimentRunStartedOrStopped(boolean started, boolean cancelled, int numExperiments, int airplaneMode) {
 		try {
 			JSONObject json = new JSONObject();
-			json.put("num_experiments", numExperiments);			
+			json.put("num_experiments", numExperiments);
+			json.put("airplane_mode", airplaneMode);
 			if (started)
 				save("experimentrun_started", json);
+			else if (cancelled)
+				save("experimentrun_cancelled", json);
 			else
-				save("experimentrun_stopped", json);
+				save("experimentrun_finished", json);
 		} catch (JSONException e) {
 			Log.e(TAG, "Cannot serialize to JSON", e);
 		}

@@ -5,14 +5,82 @@
     android:layout_height="fill_parent"
     android:padding="10dp">
     
-    <LinearLayout android:orientation="horizontal"
+    <LinearLayout android:orientation="vertical"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content">
-       	<TextView android:id="@+id/experimentstatus"
-       	          android:text="Experiment status"
+        <Button android:id="@+id/startstop"
+                android:text="Start"
+                android:layout_width="fill_parent"
+        		android:layout_height="wrap_content" />
+        		
+        <ProgressBar android:id="@+id/progressbar"
+	                 android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:max="100" />
+        
+        <TextView android:id="@+id/time_remaining"
+       	          android:text="Ready"
         		  android:layout_width="wrap_content"
         		  android:layout_height="wrap_content"
-        		  android:layout_weight="1" />
+        		  android:textSize="25sp" />
+                
+       	<TextView android:id="@+id/experiment_number"
+       	          android:text="Experiments not running"
+        		  android:layout_width="wrap_content"
+        		  android:layout_height="wrap_content"
+        		  android:textSize="25sp" />
+        		  
+        <LinearLayout android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10sp">                  
+	        <TextView android:text="Parameters"
+	        		  android:layout_width="wrap_content"
+	        		  android:layout_height="wrap_content"
+	        		  android:textSize="25sp" />        
+	        <TextView android:id="@+id/experiment_agps"
+	       	          android:text=""
+	        		  android:layout_width="wrap_content"
+	        		  android:layout_height="wrap_content"/>
+	        <TextView android:id="@+id/experiment_sleep"
+	       	          android:text=""
+	        		  android:layout_width="wrap_content"
+	        		  android:layout_height="wrap_content"/>
+	        <TextView android:id="@+id/experiment_collect"
+	       	          android:text=""
+	        		  android:layout_width="wrap_content"
+	        		  android:layout_height="wrap_content"/>        		  
+        </LinearLayout> 
+        
+        <LinearLayout android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10sp">                  
+	        <TextView android:text="Results"
+	        		  android:layout_width="wrap_content"
+	        		  android:layout_height="wrap_content"
+	        		  android:textSize="25sp" />        
+	        <TextView android:id="@+id/results_timetofirstfix"
+	       	          android:text=""
+	        		  android:layout_width="wrap_content"
+	        		  android:layout_height="wrap_content"/>
+	        <TextView android:id="@+id/results_timetofirstevent"
+	       	          android:text=""
+	        		  android:layout_width="wrap_content"
+	        		  android:layout_height="wrap_content"/>
+	        <TextView android:id="@+id/results_accuracy"
+	       	          android:text=""
+	        		  android:layout_width="wrap_content"
+	        		  android:layout_height="wrap_content"/>        		  
+        </LinearLayout>
+        
+        <TextView android:id="@+id/airplane_mode"
+	       	      android:text="Airplane mode"
+	       	      android:textSize="30sp"
+	       	      android:textColor="#FF0000"
+				  android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"/> 
     </LinearLayout>
 
 </LinearLayout>
